@@ -55,11 +55,8 @@ def get_all_posts():
 
 @app.route('/<post_id>')
 def show_post(post_id):
-    try:
-        requested_post = db.session.execute(db.select(BlogPost).where(BlogPost.id == post_id)).scalar_one_or_none()
-        if requested_post is None:
-            raise AttributeError
-    except AttributeError:
+    requested_post = db.session.execute(db.select(BlogPost).where(BlogPost.id == post_id)).scalar_one_or_none()
+    if requested_post is None:
         return jsonify({"error": "Post not found"})
     return render_template("post.html", post=requested_post)
 

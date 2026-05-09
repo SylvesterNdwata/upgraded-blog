@@ -216,7 +216,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def get_all_posts():\n    posts = db.session.execute(db.select(BlogPost)).scalars().all()\n    return render_template(\"index.html\", all_posts=posts)\n@app.route('/<post_id>')\ndef show_post(post_id):\n    try:\n        requested_post = db.session.execute(db.select(BlogPost).where(BlogPost.id == post_id)).scalar_one_or_none()\n        if requested_post is None:\n            raise AttributeError\n    except AttributeError:",
+        "peekOfCode": "def get_all_posts():\n    posts = db.session.execute(db.select(BlogPost)).scalars().all()\n    return render_template(\"index.html\", all_posts=posts)\n@app.route('/<post_id>')\ndef show_post(post_id):\n    requested_post = db.session.execute(db.select(BlogPost).where(BlogPost.id == post_id)).scalar_one_or_none()\n    if requested_post is None:\n        return jsonify({\"error\": \"Post not found\"})\n    return render_template(\"post.html\", post=requested_post)\n@app.route('/new-post', methods=[\"GET\", \"POST\"])",
         "detail": "main",
         "documentation": {}
     },
@@ -225,7 +225,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def show_post(post_id):\n    try:\n        requested_post = db.session.execute(db.select(BlogPost).where(BlogPost.id == post_id)).scalar_one_or_none()\n        if requested_post is None:\n            raise AttributeError\n    except AttributeError:\n        return jsonify({\"error\": \"Post not found\"})\n    return render_template(\"post.html\", post=requested_post)\n@app.route('/new-post', methods=[\"GET\", \"POST\"])\ndef add_new_post():",
+        "peekOfCode": "def show_post(post_id):\n    requested_post = db.session.execute(db.select(BlogPost).where(BlogPost.id == post_id)).scalar_one_or_none()\n    if requested_post is None:\n        return jsonify({\"error\": \"Post not found\"})\n    return render_template(\"post.html\", post=requested_post)\n@app.route('/new-post', methods=[\"GET\", \"POST\"])\ndef add_new_post():\n    form = BlogForm()\n    if form.validate_on_submit():\n        new_post = BlogPost(",
         "detail": "main",
         "documentation": {}
     },
