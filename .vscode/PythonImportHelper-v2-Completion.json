@@ -1,0 +1,339 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Bootstrap5",
+        "importPath": "flask_bootstrap",
+        "description": "flask_bootstrap",
+        "isExtraImport": true,
+        "detail": "flask_bootstrap",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemy",
+        "importPath": "flask_sqlalchemy",
+        "description": "flask_sqlalchemy",
+        "isExtraImport": true,
+        "detail": "flask_sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DeclarativeBase",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Mapped",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "mapped_column",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "FlaskForm",
+        "importPath": "flask_wtf",
+        "description": "flask_wtf",
+        "isExtraImport": true,
+        "detail": "flask_wtf",
+        "documentation": {}
+    },
+    {
+        "label": "StringField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "SubmitField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "DataRequired",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "URL",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "CKEditor",
+        "importPath": "flask_ckeditor",
+        "description": "flask_ckeditor",
+        "isExtraImport": true,
+        "detail": "flask_ckeditor",
+        "documentation": {}
+    },
+    {
+        "label": "CKEditorField",
+        "importPath": "flask_ckeditor",
+        "description": "flask_ckeditor",
+        "isExtraImport": true,
+        "detail": "flask_ckeditor",
+        "documentation": {}
+    },
+    {
+        "label": "cleanify",
+        "importPath": "flask_ckeditor.utils",
+        "description": "flask_ckeditor.utils",
+        "isExtraImport": true,
+        "detail": "flask_ckeditor.utils",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Base(DeclarativeBase):\n    pass\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'\ndb = SQLAlchemy(model_class=Base)\ndb.init_app(app)\n# CONFIGURE TABLE\nclass BlogPost(db.Model):\n    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n    title: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)\n    subtitle: Mapped[str] = mapped_column(String(250), nullable=False)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "BlogPost",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class BlogPost(db.Model):\n    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n    title: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)\n    subtitle: Mapped[str] = mapped_column(String(250), nullable=False)\n    date: Mapped[str] = mapped_column(String(250), nullable=False)\n    body: Mapped[str] = mapped_column(Text, nullable=False)\n    author: Mapped[str] = mapped_column(String(250), nullable=False)\n    img_url: Mapped[str] = mapped_column(String(250), nullable=False)\nclass BlogForm(FlaskForm):\n    title = StringField('Blog Post Title',validators=[DataRequired()])",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "BlogForm",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class BlogForm(FlaskForm):\n    title = StringField('Blog Post Title',validators=[DataRequired()])\n    subtitle = StringField('Subtitle', validators=[DataRequired()])\n    name = StringField('Your Name', validators=[DataRequired()])\n    url = StringField('Blog Image URL', validators=[DataRequired(), URL(message=\"Please enter a valid URL\")])\n    content = CKEditorField(\"Blog Content\", validators=[DataRequired()])\n    submit = SubmitField(\"Submit Post\")\nwith app.app_context():\n    db.create_all()\n@app.route('/')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_posts",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_all_posts():\n    posts = db.session.execute(db.select(BlogPost)).scalars().all()\n    return render_template(\"index.html\", all_posts=posts)\n@app.route('/<post_id>')\ndef show_post(post_id):\n    try:\n        requested_post = db.session.execute(db.select(BlogPost).where(BlogPost.id == post_id)).scalar_one_or_none()\n        if requested_post is None:\n            raise AttributeError\n    except AttributeError:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "show_post",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def show_post(post_id):\n    try:\n        requested_post = db.session.execute(db.select(BlogPost).where(BlogPost.id == post_id)).scalar_one_or_none()\n        if requested_post is None:\n            raise AttributeError\n    except AttributeError:\n        return jsonify({\"error\": \"Post not found\"})\n    return render_template(\"post.html\", post=requested_post)\n@app.route('/new-post', methods=[\"GET\", \"POST\"])\ndef add_new_post():",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "add_new_post",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def add_new_post():\n    form = BlogForm()\n    if form.validate_on_submit():\n        new_post = BlogPost(\n            title=form.title.data, #type: ignore\n            subtitle=form.subtitle.data,    #type: ignore\n            author=form.name.data,  #type: ignore\n            img_url=form.url.data, #type: ignore\n            body=cleanify(form.content.data), #type: ignore\n            date=date.today().strftime(\"%B %d, %Y\") #type: ignore",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "edit_post",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def edit_post(post_id: int):\n    post = db.session.execute(db.select(BlogPost).where(BlogPost.id == post_id)).scalar_one_or_none()\n    if post is None:\n        return jsonify({\"error\": \"Post not found\"})\n    form = BlogForm(\n        title=post.title,\n        subtitle=post.subtitle,\n        name=post.author,\n        url=post.img_url,\n        content=post.body",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "delete_post",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def delete_post(post_id: int):\n    post = db.session.execute(db.select(BlogPost).where(BlogPost.id == post_id)).scalar_one_or_none()\n    if post is None:\n        return jsonify({\"error\": \"Post not found\"})\n    db.session.delete(post)\n    db.session.commit()\n    return redirect(url_for(\"get_all_posts\"))\n@app.route(\"/about\")\ndef about():\n    return render_template(\"about.html\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "about",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def about():\n    return render_template(\"about.html\")\n@app.route(\"/contact\")\ndef contact():\n    return render_template(\"contact.html\")\nif __name__ == \"__main__\":\n    app.run(debug=True, port=5003)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "contact",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def contact():\n    return render_template(\"contact.html\")\nif __name__ == \"__main__\":\n    app.run(debug=True, port=5003)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = Flask(__name__)\nSECRET_KEY = os.urandom(32)\napp.config['SECRET_KEY'] = SECRET_KEY \napp.config['CKEDITOR_PKG_TYPE'] = 'standard'\nBootstrap5(app)\nCKEditor(app)\nclass Base(DeclarativeBase):\n    pass\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'\ndb = SQLAlchemy(model_class=Base)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "SECRET_KEY = os.urandom(32)\napp.config['SECRET_KEY'] = SECRET_KEY \napp.config['CKEDITOR_PKG_TYPE'] = 'standard'\nBootstrap5(app)\nCKEditor(app)\nclass Base(DeclarativeBase):\n    pass\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'\ndb = SQLAlchemy(model_class=Base)\ndb.init_app(app)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SECRET_KEY']",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app.config['SECRET_KEY'] = SECRET_KEY \napp.config['CKEDITOR_PKG_TYPE'] = 'standard'\nBootstrap5(app)\nCKEditor(app)\nclass Base(DeclarativeBase):\n    pass\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'\ndb = SQLAlchemy(model_class=Base)\ndb.init_app(app)\n# CONFIGURE TABLE",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['CKEDITOR_PKG_TYPE']",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app.config['CKEDITOR_PKG_TYPE'] = 'standard'\nBootstrap5(app)\nCKEditor(app)\nclass Base(DeclarativeBase):\n    pass\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'\ndb = SQLAlchemy(model_class=Base)\ndb.init_app(app)\n# CONFIGURE TABLE\nclass BlogPost(db.Model):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SQLALCHEMY_DATABASE_URI']",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'\ndb = SQLAlchemy(model_class=Base)\ndb.init_app(app)\n# CONFIGURE TABLE\nclass BlogPost(db.Model):\n    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n    title: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)\n    subtitle: Mapped[str] = mapped_column(String(250), nullable=False)\n    date: Mapped[str] = mapped_column(String(250), nullable=False)\n    body: Mapped[str] = mapped_column(Text, nullable=False)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "db = SQLAlchemy(model_class=Base)\ndb.init_app(app)\n# CONFIGURE TABLE\nclass BlogPost(db.Model):\n    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n    title: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)\n    subtitle: Mapped[str] = mapped_column(String(250), nullable=False)\n    date: Mapped[str] = mapped_column(String(250), nullable=False)\n    body: Mapped[str] = mapped_column(Text, nullable=False)\n    author: Mapped[str] = mapped_column(String(250), nullable=False)",
+        "detail": "main",
+        "documentation": {}
+    }
+]
