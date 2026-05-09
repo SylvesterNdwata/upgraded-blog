@@ -32,14 +32,6 @@
         "documentation": {}
     },
     {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
         "label": "jsonify",
         "importPath": "flask",
         "description": "flask",
